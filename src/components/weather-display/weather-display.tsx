@@ -1,4 +1,5 @@
 import { Unit } from "../../types/settings";
+import { classnames } from "../../utils/classnames";
 import { useWeather } from "./use-weather";
 
 export function WeatherDisplay() {
@@ -8,8 +9,10 @@ export function WeatherDisplay() {
   return (
     <div
       title={description}
-      style={{ opacity: weather ? 1 : 0, transition: "200ms" }}
-      class={"fixed bottom-12 left-12"}
+      class={classnames(
+        "fixed bottom-12 left-12 transition-opacity duration-200",
+        weather ? "opacity-1" : "opacity-0",
+      )}
     >
       <h1 className="text-2xl text-end select-none font-semibold">
         {" "}
