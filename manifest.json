@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "new-tab",
+  "version": "1.0.0-beta.0",
+  "author": "Dev-CasperTheGhost",
+  "chrome_url_overrides": {
+    "newtab": "dist/index.html"
+  },
+  "chrome_settings_overrides": {
+    "homepage": "dist/index.html"
+  },
+  "description": "Simple looking new-tab with weather display, greeting and more."
+}
